@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309010334) do
+ActiveRecord::Schema.define(version: 20170309010625) do
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20170309010334) do
     t.text     "profile",         limit: 65535
     t.string   "url"
     t.string   "location"
+    t.datetime "last_login"
+    t.string   "ip_address"
   end
 
 end
