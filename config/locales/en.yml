@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  user_mailer:
+    welcome:
+      subject: Welcome
+      body: Please confirm your email account %{confirmation_url}
+    verify_email:
+      subject: Email confirmation
+      body: Please confirm your email address %{confirmation_url}

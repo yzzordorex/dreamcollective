@@ -7,11 +7,29 @@ class UsersController < ApplicationController
                       .merge({last_login: DateTime.current,
                               ip_address: request.remote_ip}))
     if @user.save
+      @user.welcome
       session[:user_id] = @user.id
       redirect_to root_url, notice: 'Thanks for signing up!'
     else
       render :new
     end
+  end
+
+  def verify
+    @user = User.where("token = :token AND token_expires_at > :now AND verified = false",
+                       {token: params[:token], now: Time.now}).take!
+    if @user and @user.verify!
+      # update user, set session, and redirect to /show
+      session[:user_id] = @user.id
+      redirect_to profile_url, notice: 'Thanks for signing up!'
+      return
+    end
+    
+    redirect_to root_url, notice: 'Verificaion failed!'
+  end
+
+  def show
+    
   end
 
   private

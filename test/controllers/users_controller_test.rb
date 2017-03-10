@@ -5,9 +5,15 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get login_path
     assert_response :success
   end
+
   test "should get signup" do
     get signup_path
     assert_response :success
   end
 
+  test "should get verify_email" do
+    bill = users(:bill)
+    get verify_url token: bill.token
+    assert_redirected_to profile_path
+  end
 end

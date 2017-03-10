@@ -7,7 +7,11 @@ bill:
 ted:
   email: ted@adventure.org
   password_digest: <%= User.digest('password') %>
+  verified: true
 
 plato:
   email: republican@athens.gov
   password_digest: <%= User.digest('password') %>
+  verified: true
+  admin: true
+
