@@ -3,7 +3,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
   def create
-    @user = User.new(allowed_params)
+    @user = User.new(allowed_params
+                      .merge({last_login: DateTime.current,
+                              ip_address: request.remote_ip}))
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_url, notice: 'Thanks for signing up!'

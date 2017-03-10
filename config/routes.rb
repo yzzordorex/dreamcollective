@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
   get 'sessions/new'
+  
   resources :sessions
   resources :users
 
