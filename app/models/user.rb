@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
-
   validates :email, presence: true
+  before_create :email_confirmation_token
 
   def update_session_attrs(remote_ip)
     begin
@@ -10,7 +10,8 @@ class User < ApplicationRecord
     rescue
       # log something
     end
-
+  end
+  
   def welcome
     SendNewUserWelcomeJob.perform_later(id)
   end
@@ -18,4 +19,13 @@ class User < ApplicationRecord
   def confirm_email
     SendUserEmailConfirmationJob.perform_later(id)
   end
+
+
+  private
+  def email_confirmation_token
+    if self.token.blank?
+      self.token = SecureRandom.urlsafe_base64.to_s
+    end
+  end
+
 end

@@ -16,4 +16,6 @@ class UserTest < ActiveSupport::TestCase
     assert_respond_to user, :password_digest
     assert_respond_to user, :authenticate, "User requires has_secure_password"
   end
+
+  
 end

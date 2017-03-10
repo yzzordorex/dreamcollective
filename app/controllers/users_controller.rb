@@ -7,6 +7,7 @@ class UsersController < ApplicationController
                       .merge({last_login: DateTime.current,
                               ip_address: request.remote_ip}))
     if @user.save
+      @user.welcome
       session[:user_id] = @user.id
       redirect_to root_url, notice: 'Thanks for signing up!'
     else
