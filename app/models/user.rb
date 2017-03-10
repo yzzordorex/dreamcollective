@@ -10,5 +10,12 @@ class User < ApplicationRecord
     rescue
       # log something
     end
+
+  def welcome
+    SendNewUserWelcomeJob.perform_later(id)
+  end
+
+  def confirm_email
+    SendUserEmailConfirmationJob.perform_later(id)
   end
 end
