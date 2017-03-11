@@ -1,8 +1,12 @@
 class User < ApplicationRecord
   has_secure_password
-  validates :email, presence: true
+  validates :email,
+            presence: true,
+            uniqueness: true,
+            format: { with: /\A\S+@\S+\.\S+\z/ }
   before_create :email_confirmation_token
-
+  
+  
   def update_session_attrs(remote_ip)
     begin
       update(last_login: DateTime.current, ip_address: remote_ip)

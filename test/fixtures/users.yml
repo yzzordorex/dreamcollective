@@ -1,9 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  email: MyString
+bill:
+  email: bill@adventure.org
   password_digest: MyString
 
-two:
-  email: MyString
+ted:
+  email: ted@adventure.org
   password_digest: MyString
+  verified: true
+
+plato:
+  email: republican@athens.gov
+  password_digest: MyString
+  verified: true
+  admin: true
