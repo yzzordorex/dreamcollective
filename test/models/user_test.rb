@@ -31,7 +31,7 @@ class UserTest < ActiveSupport::TestCase
     good_emails = ['foo@bar.com', 'f.o.o@bar.com', 'foo@r.whocares']
     bad_emails = ['foo@bar', 'foo.com', 'foo', 'foo@', 'foo@bar']
     good_emails.each do |good_email|
-      user = User.new(base_params.merge(email: 'foo@bar.com'))
+      user = User.new(base_params.merge(email: good_email))
       assert user.valid?
     end
     bad_emails.each do |bad_email|
