@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dream.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @dream.body %>
+</p>
+
+<p>
+  <strong>Date occurred:</strong>
+  <%= @dream.date_occurred %>
+</p>
+
+<p>
+  <strong>Belongs to:</strong>
+  <%= @dream.belongs_to %>
+</p>
+
+<%= link_to 'Edit', edit_dream_path(@dream) %> |
+<%= link_to 'Back', dreams_path %>

@@ -1,0 +1,41 @@
+<%= form_for(dream) do |f| %>
+  <% if dream.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dream.errors.count, "error") %> prohibited this dream from being saved:</h2>
+
+      <ul>
+      <% dream.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_occurred %>
+    <%= f.datetime_select :date_occurred %>
+  </div>
+
+  <div class="field">
+    <%= f.label :belongs_to %> 
+    <%= f.hidden_field :user_id, value: @current_user.id %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :all_tags, placeholder: "Tags separated with comma" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
