@@ -30,6 +30,6 @@
 
 <br>
 
-<% unless @current_user.nil? %>
+<% unless logged_in? %>
     <%= link_to 'New Dream', new_dream_path %>
 <% end %>

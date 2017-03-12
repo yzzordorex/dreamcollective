@@ -14,7 +14,7 @@ class DreamsController < ApplicationController
 
   # GET /dreams/new
   def new
-    if @current_user.nil?
+    unless logged_in?
         redirect_to login_path
     else
         @dream = Dream.new
