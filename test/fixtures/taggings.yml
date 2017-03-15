@@ -7,3 +7,16 @@ one:
 two:
   dream: two
   tag: two
+
+three:
+  dream: one
+  tag: lucid
+
+four:
+  dream: one
+  tag: nightmare
+
+five:
+  dream: two
+  tag: recurring
+

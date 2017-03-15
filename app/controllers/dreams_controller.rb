@@ -73,6 +73,7 @@ class DreamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dream_params
-      params.require(:dream).permit(:title, :body, :date_occurred, :belongs_to)
+      params.require(:dream).permit(:title, :body, :date_occurred, :user_id)
+
     end
 end

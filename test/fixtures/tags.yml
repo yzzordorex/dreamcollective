@@ -1,7 +1,18 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: Bob
 
 two:
-  name: MyString
+  name: Jane
+
+lucid:
+  name: Lucid
+
+nightmare:
+  name: Nightmare
+
+recurring:
+  name: Recurring
+
+

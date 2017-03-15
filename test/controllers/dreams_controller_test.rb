@@ -10,14 +10,15 @@ class DreamsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
+  test "should redirect if getting new while logged out" do
     get new_dream_url
-    assert_response :success
+    assert_response :redirect
   end
 
   test "should create dream" do
     assert_difference('Dream.count') do
-      post dreams_url, params: { dream: { belongs_to: @dream.belongs_to, body: @dream.body, date_occurred: @dream.date_occurred, title: @dream.title } }
+      @current_user = Session.new(User.first)
+      post dreams_url, params: { dream: { user: @current_user, body: @dream.body, date_occurred: @dream.date_occurred, title: @dream.title, all_tags: @dream.all_tags } }
     end
 
     assert_redirected_to dream_url(Dream.last)
@@ -28,13 +29,13 @@ class DreamsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get edit" do
+  test "should get edit if logged in" do
     get edit_dream_url(@dream)
     assert_response :success
   end
 
   test "should update dream" do
-    patch dream_url(@dream), params: { dream: { belongs_to: @dream.belongs_to, body: @dream.body, date_occurred: @dream.date_occurred, title: @dream.title } }
+    patch dream_url(@dream), params: { dream: { user_id: @dream.user_id, body: @dream.body, date_occurred: @dream.date_occurred, title: @dream.title, all_tags: @dream.all_tags } }
     assert_redirected_to dream_url(@dream)
   end
 

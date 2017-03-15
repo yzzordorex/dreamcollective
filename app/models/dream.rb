@@ -1,5 +1,6 @@
 class Dream < ApplicationRecord
-  has_many :taggings
+  belongs_to :user
+  has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
 
   def all_tags=(names)
