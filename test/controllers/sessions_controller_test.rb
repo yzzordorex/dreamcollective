@@ -11,5 +11,6 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
 
   test "login" do
     sign_in_as users(:bill).email, "password"
+    assert_redirected_to root_path
   end
 end

@@ -51,27 +51,35 @@ class UserTest < ActiveSupport::TestCase
     ted = users(:ted)
     email_address, confirmation_token = ted.email, ted.token
     assert ted.verified
+    
     new_email_address = 'theo@tardis.org'
-    assert email_address != new_email_address
+    assert_not_equal email_address, new_email_address
     ted.email = new_email_address
     ted.save
-    #refute ted.verified
-    
+    ted.reload
+    refute ted.verified
   end
-
+  
   test "verify!" do
     bill = users(:bill)
     refute bill.verified
     bill.verify!
     assert bill.verified
   end
+
+  test "email downcased on save" do
+    bill = users(:bill)
+    new_email = 'Theo@Tardis.org'
+    assert_not_equal bill.email, new_email
+    bill.email = new_email
+    bill.save
+    bill.reload
+    assert_equal bill.email, new_email.downcase
+  end
   
-
-  test "scoped as verified" do
-    
-  end
-  test "scoped as not verified" do
-
-  end
+  # test "scoped as verified" do
+  # end
+  # test "scoped as not verified" do
+  # end
   
 end
