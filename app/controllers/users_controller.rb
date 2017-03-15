@@ -2,14 +2,15 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+  
   def create
     @user = User.new(allowed_params
                       .merge({last_login: DateTime.current,
                               ip_address: request.remote_ip}))
     if @user.save
       @user.welcome
-      session[:user_id] = @user.id
-      redirect_to root_url, notice: 'Thanks for signing up!'
+      #session[:user_id] = @user.id
+      redirect_to root_url, notice: 'Thanks for signing up! Please check your email to complete the registration process.'
     else
       render :new
     end
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
     if @user and @user.verify!
       # update user, set session, and redirect to /show
       session[:user_id] = @user.id
-      redirect_to profile_url, notice: 'Thanks for signing up!'
+      redirect_to profile_url, notice: 'Thanks for verifying your email address. Your account is now active!'
       return
     end
     
