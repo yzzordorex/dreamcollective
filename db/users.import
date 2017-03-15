@@ -1,0 +1,994 @@
+
+users = [
+
+	user.new(
+		:email => "yzzordorex@gmail.com", 
+		:password => "ohv1y7SpXSpPA", 
+		:username => "yzzordorex", 
+		:real_name=> "yzz90x90.jpg", 
+		:url=> "http://skinthesky.net", 
+		:location=> "New York, NY", 
+		:profile=> "I have been recording my dreams for about fifteen years. I started this project because I'm interested in the similarities and differences in what people dream, and I'd like to see how dreams are affected  by events in the world, in our lives, our backgrounds. I used to dream lucidly with great frequency when I was 17 and 18. I have recurrent dreams of a place that gets larger over time. Sometimes I know where I am in reference to other dreams of the place. I've dreamed of this place for about fifteen years.") 
+		:last_login=> "2008-04-10 11:10:51"), 
+	user.new(
+		:email => "chrisb@wwmg.com", 
+		:password => "ohxP6TP.Kjfwk", 
+		:username => "entweichen", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "New York, NY", 
+		:profile=> "My nocturnal fantasies are proportional to the amount of sleep I get. I need to be snuggled in bed before a certain time in order to dream anything remotely interesting. For years, I've been plagued by a recurring dream in which I'm attacked by a large shark. In all likelihood, the dream is caused by an unresolved issue nestled deep in my subconcious. Then again, maybe I'm just afraid of sharks. I'll cop out and blame my parents.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "dan@fuguestate.org", 
+		:password => "oh60gN2LJyCs6", 
+		:username => "kafk", 
+		:real_name=> "", 
+		:url=> "http://fuguestate.org", 
+		:location=> "Cambridge, UK", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "coxmage@yahoo.com", 
+		:password => "ohgkKjXXTa0fM", 
+		:username => "coxmage", 
+		:real_name=> "", 
+		:url=> "http://transub.blogspot.com", 
+		:location=> "San Francisco", 
+		:profile=> "structure...reclassified") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "magicicada@magicicada.com", 
+		:password => "ohrQuNdg/yhY6", 
+		:username => "magicicada", 
+		:real_name=> "", 
+		:url=> "http://www.magicicada.com", 
+		:location=> "atlanta", 
+		:profile=> "a man in georgia") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "siglow@gmail.com", 
+		:password => "ohiz4QYl8MWl2", 
+		:username => "plasmOtron", 
+		:real_name=> "", 
+		:url=> "http://www.nocien.net", 
+		:location=> "ny.ny.usa", 
+		:profile=> "i have recently resumed dreaming again after a six year dry spell. been sleeping lots to make up for some lost time. :-]") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "m@shinystuff.com", 
+		:password => "ohZvjwWWiLGjA", 
+		:username => "precid", 
+		:real_name=> "", 
+		:url=> "http://www.shinystuff.com", 
+		:location=> "Toronto", 
+		:profile=> "contrary to popular belief, death isn\'t just for dead people, it can happen to any of us.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "thevisionthing@yahoo.com", 
+		:password => "ohQSOlCX/flYk", 
+		:username => "thevisionthing", 
+		:real_name=> "", 
+		:url=> "http://www.livejournal.com/users/thevisionthing", 
+		:location=> "Oakland, CA", 
+		:profile=> "I've had an abiding interest in dreams for my whole life, but have never recorded them formally until now. I tend to have vivid, colorful and bizarre dreams full of horror and mythological type content. There is a pretty consistent geography, and even repeating characters that don't exist in real life. I never lucid dream. ") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "toesies@moosehair.com", 
+		:password => "oh6fH5/Ctneh6", 
+		:username => "Cassidy", 
+		:real_name=> "", 
+		:url=> "http://www.livefournal.com/~yocontemporary", 
+		:location=> "Englewood Fl", 
+		:profile=> "I am interested in what you really think, in relation to what, well how about everything then, starting at the top? If something 's personal, then one would think that it stays to themselves. But more often than not, I see the contents of everyone 's underwear drawers hanging on them like a useless bag. We should all learn how to be naked not in the persuit of sexual attention, but in the persuit of ending all deragatory attention. That 's what I think right now.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "cera@seemescreaming.com", 
+		:password => "oht0mLUa5OYk6", 
+		:username => "beatrix", 
+		:real_name=> "", 
+		:url=> "http://www.seemescreaming.com", 
+		:location=> "oakland, CA", 
+		:profile=> "i 'm just this chick.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "irisnine@hotmail.com", 
+		:password => "ohgLBOiK8q0V2", 
+		:username => "shi10", 
+		:real_name=> "", 
+		:url=> "http://shi10.nu", 
+		:location=> "Virginia", 
+		:profile=> "souls collected to date: 8") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "l_cain@hotmail.com", 
+		:password => "oh0.Y7Fz1XBec", 
+		:username => "katesarah", 
+		:real_name=> "", 
+		:url=> "http://www.envy.nu/wickedwoman", 
+		:location=> "confusion, USA", 
+		:profile=> "lately i 've really liked the name lucinda. i 'm looking for the love of my life. i'm a narcissist. is that spelled properly? i have a lot of dreams, i guess that 's why i 'm here.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "nifkin@nifkin.de", 
+		:password => "ohc08LzDMfrNs", 
+		:username => "nifkin", 
+		:real_name=> "", 
+		:url=> "http://www.nifkin.de/", 
+		:location=> "annapolis.md.us", 
+		:profile=> "chronic insomniac") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "reggie@dbogeb66.org", 
+		:password => "ohA51YECsaSDM", 
+		:username => "ReggieReno", 
+		:real_name=> "", 
+		:url=> "http://www.dbogeb66.org/dave", 
+		:location=> "Chicago", 
+		:profile=> "When I was very young I had dreams that I was the earth. When I was in high school I had dreams that I was having sex. When I was twenty I started practicing lucid dreaming with some people but that didn't work out and I realized later that we had some weird ideas that didn't really make sense. Lately I have been dreaming about warehouses or a series of paths in the woods, and sometimes I've killed someone close to me and I regret it.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "crangirl@email.com", 
+		:password => "ohtuVu5Hdp4MY", 
+		:username => "crangirl", 
+		:real_name=> "", 
+		:url=> "http://crangirl.virtualave.net", 
+		:location=> "saturn", 
+		:profile=> "i like whips and chains") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "nosueblue@hotmail.com", 
+		:password => "ohueATTVVbCCc", 
+		:username => "sueblue", 
+		:real_name=> "", 
+		:url=> "http://www.lucid-dreamer.net", 
+		:location=> "Arcadia", 
+		:profile=> "audio, visual, intellectual") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "hulkhero@yahoo.com", 
+		:password => "oh8lp28SHf3Y.", 
+		:username => "phlegethon", 
+		:real_name=> "", 
+		:url=> "http://www.geocities.com/hulkhero", 
+		:location=> "California", 
+		:profile=> "I dream, and I keep a journal, but I don't like to write about dreams in my journal. I will write about them here. I do not have nightmares. Or at least they don't feel like nightmares. There are many people I know in this place.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "rmlemmon@hotmail.com", 
+		:password => "oh/pFayKx.bDQ", 
+		:username => "pazzoide", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "transwarrior@hotmail.com", 
+		:password => "ohJv/niFTs2Mk", 
+		:username => "chasingdogma", 
+		:real_name=> "", 
+		:url=> "http://fpfnc.topcities.com/fpfnc.html", 
+		:location=> "sc", 
+		:profile=> "") 
+		:last_login=> "2010-10-16 00:39:46"), 
+	user.new(
+		:email => "keebz69@hotmail.com", 
+		:password => "ohr.Rm6Lu7w8c", 
+		:username => "alvastarr", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "Michigan", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "joey_pate2002@yahoo.com", 
+		:password => "ohPemkXTYjMGc", 
+		:username => "Joey", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "Mayfield", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "centre-subliminal@snowchyld.org", 
+		:password => "ohcKMUaahX9Ds", 
+		:username => "snowchyld", 
+		:real_name=> "", 
+		:url=> "http://snowchyld.org", 
+		:location=> "here ?", 
+		:profile=> "umm") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "andrea@unsortable.com", 
+		:password => "ohhSpsXxw0kWc", 
+		:username => "unsortable", 
+		:real_name=> "", 
+		:url=> "http://unsortable.com", 
+		:location=> "mo", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "girlgirlgirl63@hotmail.com", 
+		:password => "ohSWG3T4vZswc", 
+		:username => "blue", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "CA", 
+		:profile=> "I have always had very vivid extreme dreams. Most often I have no idea what is happening when I wake up. I become lost in it for a minute or so. Over the last 3 years I have started having night terrors. I also had them when I was a child, but they stopped when I was about 7. When I wake up from these nightmares I am still dreaming and completely involved in a very scary hallucination. I can have conversations and even explain what is happening while the terror is still occurring, but usually the hallucination will dissapear while I am explaining it. It actually looks like it is disolving. After it is over I am pale and covered in sweat. I normally feel light headed and the memory of what just occured begins to fade immediatley. I feel confused and sleep does not come easily for an hour or so. I guess I dream in extremes because if it is not a night terror it is usually something so vivid and colorful. Something very real. Sometimes the dreams are so beautiful that it is painful to wake up.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "trobles@scu.edu", 
+		:password => "ohSX8m8A6SdDY", 
+		:username => "tyneetim", 
+		:real_name=> "", 
+		:url=> "http://www.postdigital.com/~tim", 
+		:location=> "seattle", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "jason_nolte@hotmail.com", 
+		:password => "ohxuWkGWBOvZk", 
+		:username => "_jazz", 
+		:real_name=> "", 
+		:url=> "http://instamatic.org", 
+		:location=> "austin, tx", 
+		:profile=> "i like to people watch - people fascinate me.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "jcox@sukaexperience.com", 
+		:password => "ohFT4NDjMPbBY", 
+		:username => "finepoint", 
+		:real_name=> "", 
+		:url=> "http://www.sukaexperience.com", 
+		:location=> "austin", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "krystho@yahoo.it", 
+		:password => "oh/Fx8sxQe/eg", 
+		:username => "lordgal", 
+		:real_name=> "", 
+		:url=> "http://www.la-famiglia.org", 
+		:location=> "Italy", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "Jonkrusell@hotmail.com", 
+		:password => "ohy90O2MZoRJc", 
+		:username => "JK", 
+		:real_name=> "", 
+		:url=> "http://www.jonkrusell.com", 
+		:location=> "Chicago", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "twatrag@hotmail.com", 
+		:password => "ohXrc53GOiz0A", 
+		:username => "mrwormy", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "UK", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "paulekennedy2002@yahoo.ca", 
+		:password => "oh5lVSPiVfgh2", 
+		:username => "pkpowerofone", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "deel@de3l.com", 
+		:password => "ohgRExKdqkpsI", 
+		:username => "deel", 
+		:real_name=> "deeldream2.jpg", 
+		:url=> "http://www.de3l.com", 
+		:location=> "nc coast", 
+		:profile=> "dreamer") 
+		:last_login=> "2012-09-10 20:04:06"), 
+	user.new(
+		:email => "thekilljoy99@hotmail.com", 
+		:password => "ohCMEVldIQ7/o", 
+		:username => "killjoy", 
+		:real_name=> "", 
+		:url=> "http://www.livejournal.com/users/killjoy", 
+		:location=> "Bay Area, Ca", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "jennyflection@donotreply.com", 
+		:password => "oh9s3AYK0MItw", 
+		:username => "Jennyflection", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "California", 
+		:profile=> "Rar!") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "miztinsel@livejournal.com", 
+		:password => "ohf2nzMLFZFqk", 
+		:username => "miztinsel", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2008-01-01 15:16:35"), 
+	user.new(
+		:email => "luisa@scartissue.net", 
+		:password => "ohcGdwx8GBWm6", 
+		:username => "burn", 
+		:real_name=> "", 
+		:url=> "http://toxic.scartissue.net", 
+		:location=> "australia", 
+		:profile=> "nineteen & female. i don 't remember my dreams each night. they 're probably mostly boring.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "cheshiremoons@hotmail.com", 
+		:password => "ohcbSAGIqeehM", 
+		:username => "cheshiremoon", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "austin", 
+		:profile=> " ") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "dreams@ciaracat.net", 
+		:password => "oh7Bg7rk9cFVY", 
+		:username => "ciaracat", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "West Texas", 
+		:profile=> "Long spells of intense dreams and nightmares.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "phoebelune7@aol.com", 
+		:password => "ohGKnJLv.BILg", 
+		:username => "phoebelune", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "ohio", 
+		:profile=> "i used to have lucid dreams quite often, nearly every night. i can remember my dreams from very early childhood & in some cases i 'm assured events i feel are memories of true events were really only dreams. since i began my curent relationship i am very unsatisfied with my dream life. most of my recent dreams have been disturbing & i find myself waking suddenly & feeling very disoriented. i have had recurring dreams, most of which progressed a little further each time the dream occurred.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "tamara80@yahoo.com", 
+		:password => "oh0Emfw7/avSU", 
+		:username => "tamara", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "ireland", 
+		:profile=> "designer") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "sosg45mac@yahoo.com", 
+		:password => "oh3lXhBGwzg6w", 
+		:username => "pistaccio", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "here", 
+		:profile=> "i am me") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "none@modi.cum", 
+		:password => "oh9JL84uqUamA", 
+		:username => "enoch", 
+		:real_name=> "", 
+		:url=> "http://12tribes.com", 
+		:location=> "never constant", 
+		:profile=> "born- living- I will die") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "Shiesty_one@hotmail.com", 
+		:password => "ohnDoSwl7PVGw", 
+		:username => "Shiesty_princess", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "San diego", 
+		:profile=> "Hi,my name is Stella I am 18 yr old and Im in my 1st yr of college. I live in San diego, Cali.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "pluckyha@hotmail.com", 
+		:password => "oh8Bk2AAf.YXI", 
+		:username => "thao", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "brooklyn, nyc", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "star_moon_sun00@yahoo.com", 
+		:password => "ohQEdfEjA2hl6", 
+		:username => "starmoonsun", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "centre-subliminal@antiuser.org", 
+		:password => "ohPUjMH9.fbwk", 
+		:username => "antiuser", 
+		:real_name=> "", 
+		:url=> "http://antiuser.org", 
+		:location=> "Annwn", 
+		:profile=> "I 'm up there. In the clouds. Will you wave if you see me?") 
+		:last_login=> "2012-01-11 15:59:54"), 
+	user.new(
+		:email => "assassin@assassinbeetle.net", 
+		:password => "oh6azTJLpHFcA", 
+		:username => "assassinbeetle", 
+		:real_name=> "", 
+		:url=> "http://www.assassinbeetle.net", 
+		:location=> "oakland, ca", 
+		:profile=> "i live in oakland. i have weird dreams. i work as a photo lab monkey.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "rick@masschaos.net", 
+		:password => "oh80Qcr8Vp5oA", 
+		:username => "chromaticdeath", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "Boston, MA", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "ellih@yahoo.com", 
+		:password => "ohsIgYPJN/gps", 
+		:username => "cleverleaf", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "www.ellihollands.com", 
+		:profile=> "When I remember my dreams they are filled with adventure. I want to develop my dreaming abilities.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "an_aesthetic_wombat@hotmail.com", 
+		:password => "ohhwVo61Fk68I", 
+		:username => "joe_47", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "England", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "goforitsurfer@aol.com", 
+		:password => "ohpF1GJOkZlLI", 
+		:username => "Lethal_Stigma", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "erenecs@yahoo.com", 
+		:password => "ohcLoU/8U/rRI", 
+		:username => "erenecs", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "My earliest remembered dream, was seeing this goblin type monster, on a metal rack, exploding in front of a mountain. another one was my mother trying to light a kerosene heater, and her arm catching on fire, saying ") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "kunju_ck@hotmail.com", 
+		:password => "oh2Vm1Yzr8O3U", 
+		:username => "CK", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "i_347_vache@yahoo.com", 
+		:password => "ohUsMybbknhWs", 
+		:username => "Hurt_dreams", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "Who knows, you know?", 
+		:profile=> " I don 't know much about myself, i mean, the basic facts could be wrong. Because, what I was stolen and my birthday and race was just picked out of random? This can be ANYONE. Things i do know is i listen to mosty hard rock and emo, and i enjoy art and english. I have the weird, but kick ass dreams. Maybe i can talk with others about em. :P") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "marymerlot007@yahoo.com", 
+		:password => "ohlwthiFLvLvc", 
+		:username => "mrssubroza", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "San Diego, CA", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "zing@keendom.com", 
+		:password => "ohe.dawmXNzNY", 
+		:username => "Turbo", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "New York City", 
+		:profile=> "I slept too much ") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "dreams@karmative.com", 
+		:password => "ohWAhBRM2BWjw", 
+		:username => "reap", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "california", 
+		:profile=> "Lately my dreams have been sporadic to say the least. I used to have repetitive dreams over a period of many months...usually of me being shot and actually physically feeling the bullets rip through my body, most of the time they ended with me being shot in the head...I feel my life end my dream goes black and I instantly wake up in a panic. I haven't had those dreams for a while thankfully. Other dreams are pretty random like most dreams are.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "peterson@totaltraining.com", 
+		:password => "oh2X2dn2es2Vk", 
+		:username => "RedBuffaloSkySurfer", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "Dreams are gifts, free wisdom from the unconscious. I treat mine like visions, pondering and listening to their voices. Into the darkness I go happy, into the sun I rise anew.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "jason@instrmntl.com", 
+		:password => "ohPhn22ObN0yM", 
+		:username => "derailed", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "exposure@gmail.com", 
+		:password => "ohd2e6WUckE/E", 
+		:username => "slip", 
+		:real_name=> "", 
+		:url=> "http://www.fiftymillimeter.com", 
+		:location=> "athens, ga", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "MaryCEady@gmail.com", 
+		:password => "ohlwthiFLvLvc", 
+		:username => "merlot", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "Carlsbad, CA", 
+		:profile=> "it's me. mary.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "rbnj1972@aol.com", 
+		:password => "ohDfjrD4qHsOk", 
+		:username => "kuntface", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "assassin@assassinbeetle.net", 
+		:password => "oh/kVCh3Vl9WU", 
+		:username => "reduviidae", 
+		:real_name=> "", 
+		:url=> "http://www.assassinbeetle.net", 
+		:location=> "oakland, california", 
+		:profile=> "i like to paint, i like robots. also snails.") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "amorvitalaus@yahoo.com", 
+		:password => "ohQhPSvDTdWJw", 
+		:username => "sleepyhead", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "glomad@gmail.com", 
+		:password => "ohpDUOa2JVvFU", 
+		:username => "ithcy", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "st petersburg, fl, usa", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "lucky_wander_boy@yahoo.com", 
+		:password => "ohiPldfDEhe8w", 
+		:username => "wanderboy", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "yzzordorex@yahoo.com", 
+		:password => "ohf.KmjKe27gE", 
+		:username => "yzztest", 
+		:real_name=> "IMG_6440.jpg", 
+		:url=> "", 
+		:location=> "nyc", 
+		:profile=> "") 
+		:last_login=> "2007-12-29 11:40:21"), 
+	user.new(
+		:email => "stop@spam.com", 
+		:password => "oh9UXNr8z2NHM", 
+		:username => "crapdigger", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2007-12-28 16:44:27"), 
+	user.new(
+		:email => "kybug@comcast.net", 
+		:password => "ohdCPXhgIdxKA", 
+		:username => "rumrunner", 
+		:real_name=> "clockwork-orange2.jpg", 
+		:url=> "", 
+		:location=> ":D INYOPANTS", 
+		:profile=> "Soup /x/.") 
+		:last_login=> "2008-01-05 06:53:12"), 
+	user.new(
+		:email => "ThrashWolf@ass.com", 
+		:password => "ohNPr5vNcfWGQ", 
+		:username => "ThrashWolf", 
+		:real_name=> "logo.jpg", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2014-01-05 00:02:19"), 
+	user.new(
+		:email => "jmfx403@aol.com", 
+		:password => "ohfg798hMTKX.", 
+		:username => "batman", 
+		:real_name=> "self-portrait_large_crop.jpg", 
+		:url=> "", 
+		:location=> "Paris, France", 
+		:profile=> "I've been recording my dreams, when i remember them (they come in waves), since I was about thirteen or fourteen, when I first got interested in lucid dreaming.  I've only ever lucid dreamed once, and it's quite a funny story.  My recurring dreams are about snakes, flying (the air seems to get thicker and i can swim in it), getting lost underwater and nearly drowning until i realize i can breathe underwater, driving in a car and i have to use my feet to stop because there's no floor like fred flintstone, and walking or driving in bizarre, abandoned, and labyrinthine  interior architectural spaces in which gravity is relative to the surface i'm on.") 
+		:last_login=> "2008-03-28 07:03:55"), 
+	user.new(
+		:email => "aholtgraver@gmail.com", 
+		:password => "oh1q2uxG68NZw", 
+		:username => "anoukephemere", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "boston", 
+		:profile=> "") 
+		:last_login=> "2008-04-15 13:08:05"), 
+	user.new(
+		:email => "lolivas@frii.com", 
+		:password => "ohQGZOsmXv/4w", 
+		:username => "snakewoman", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "Fort Collins", 
+		:profile=> "") 
+		:last_login=> "2008-04-16 11:28:52"), 
+	user.new(
+		:email => "ms446@yahoo.com", 
+		:password => "oh876S3cVd.2w", 
+		:username => "Obrut", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2008-08-06 19:45:28"), 
+	user.new(
+		:email => "toonomads@mac.com", 
+		:password => "ohNRNDNYkrT5I", 
+		:username => "19MJP48", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2008-08-08 19:13:47"), 
+	user.new(
+		:email => "thelastdayofscorpio@hotmail.com", 
+		:password => "ohRFCVsibryeo", 
+		:username => "wakinglife21", 
+		:real_name=> "september_160.jpg", 
+		:url=> "", 
+		:location=> "Vancouver & Abroad", 
+		:profile=> "") 
+		:last_login=> "2008-08-11 21:06:55"), 
+	user.new(
+		:email => "Winged_adara@yahoo.com", 
+		:password => "oh1eUwOOKNR3Q", 
+		:username => "WinterZeroe", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "North", 
+		:profile=> "") 
+		:last_login=> "2008-08-19 21:01:24"), 
+	user.new(
+		:email => "alaux@tampabay.rr.com", 
+		:password => "oh0KvpgptqgT6", 
+		:username => "alaux22675471", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2008-08-23 10:26:16"), 
+	user.new(
+		:email => "admin@renegadearts.org", 
+		:password => "ohs5nnTCMXLk2", 
+		:username => "renegade", 
+		:real_name=> "16crystal.jpg", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2008-10-14 11:18:04"), 
+	user.new(
+		:email => "marilynn5@rogers.com", 
+		:password => "oh7q0IQyXaGnA", 
+		:username => "zelda5", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2009-09-22 15:54:53"), 
+	user.new(
+		:email => "murel@163.com", 
+		:password => "oh81o0i.a1f9s", 
+		:username => "murel", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2009-10-05 07:36:59"), 
+	user.new(
+		:email => "sanel73@webmail.co.za", 
+		:password => "ohYrVvazSo2DY", 
+		:username => "benetton", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "Cape Town", 
+		:profile=> "") 
+		:last_login=> "2009-11-30 07:59:40"), 
+	user.new(
+		:email => "lovingyoudearlyandsosweetly@yahoo.com", 
+		:password => "ohMoVgCIIYpIE", 
+		:username => "pkelf", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "West Coast, USA", 
+		:profile=> "I pursue having the best day of my life everyday! I dance and play with fairies. I follow my dreams. I encourage everyone to be happy, healthy, joyful and free!! It is the only way to be!") 
+		:last_login=> "2009-12-02 09:33:50"), 
+	user.new(
+		:email => "yzz@nonsymptomatic.net", 
+		:password => "ohhxlbu9puQoY", 
+		:username => "rargle", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2009-12-22 12:53:14"), 
+	user.new(
+		:email => "aimee@barbariangroup.com", 
+		:password => "oh95pSrRY19.E", 
+		:username => "aimee", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2010-01-06 10:42:18"), 
+	user.new(
+		:email => "sirsin@gmail.com", 
+		:password => "ohO4cjfTTHMY6", 
+		:username => "SirSin", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2010-01-01 20:42:37"), 
+	user.new(
+		:email => "rememberalice@yahoo.ca", 
+		:password => "oh03bamzUGGjQ", 
+		:username => "rememberalice", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "nightmares; night terrors; sleep paralysis; communications, for lack of a better word; everyday; controlled and vague. Had them all at one point or another.") 
+		:last_login=> "2010-01-28 09:14:21"), 
+	user.new(
+		:email => "rememberalice@yahoo.ca", 
+		:password => "oh03bamzUGGjQ", 
+		:username => "Alice", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2010-01-28 10:35:12"), 
+	user.new(
+		:email => "geh4evr@gmail.com", 
+		:password => "ohBVo4NBaLor.", 
+		:username => "Thowl", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "Dublin,Ireland", 
+		:profile=> "") 
+		:last_login=> "2010-04-22 17:56:51"), 
+	user.new(
+		:email => "bkvehrs@charter.net", 
+		:password => "ohSYW27j/PcMY", 
+		:username => "lucidity2233", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "Oregon", 
+		:profile=> "Into the whole "Japanimation" thing lately, weird sleep patterns, often lucid dream, collective dream, etc. etc. 
+Wish I could control my dreams better, though...") 
+		:last_login=> "2010-07-04 20:15:01"), 
+	user.new(
+		:email => "henrymschenker@gmail.com", 
+		:password => "ohK4iSX27HPec", 
+		:username => "cumulus", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2010-09-14 06:14:20"), 
+	user.new(
+		:email => "mailforgel@hotmail.com", 
+		:password => "ohYX6AjuHFuIQ", 
+		:username => "acelima", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "sydney", 
+		:profile=> "") 
+		:last_login=> "2010-09-15 04:07:24"), 
+	user.new(
+		:email => "chrishelme2003@yahoo.co.uk", 
+		:password => "oh9rldRvX0nmc", 
+		:username => "christoff2003", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2010-09-26 11:14:37"), 
+	user.new(
+		:email => "mbirabeat@gmail.com", 
+		:password => "ohHrTbl1r8wkU", 
+		:username => "MbiraBeat", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2010-12-21 15:15:01"), 
+	user.new(
+		:email => "raynagellert@gmail.com", 
+		:password => "ohGUnxsJfI0gg", 
+		:username => "raynakay", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2010-12-30 13:57:33"), 
+	user.new(
+		:email => "info@loganworks.net", 
+		:password => "ohRypXbTp7kd6", 
+		:username => "logan", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2011-01-06 04:16:50"), 
+	user.new(
+		:email => "emily@photograham.com", 
+		:password => "ohlpXwMZVihJk", 
+		:username => "emilina", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2011-03-18 16:48:26"), 
+	user.new(
+		:email => "rp_the_hurricane@yahoo.com", 
+		:password => "ohQiv/eVXlXTI", 
+		:username => "dreamois", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "p.i.", 
+		:profile=> "dreams at random") 
+		:last_login=> "2011-04-15 12:06:13"), 
+	user.new(
+		:email => "albertolucis@gmail.com", 
+		:password => "oh3.PHn/XqZBs", 
+		:username => "albertolucis", 
+		:real_name=> "Alberto_Lucis_Made_in_the_USA.jpg", 
+		:url=> "", 
+		:location=> "Green Mountain Falls, CO", 
+		:profile=> "Artist") 
+		:last_login=> "2011-06-22 19:32:47"), 
+	user.new(
+		:email => "vika.evdokimenko@gmail.com", 
+		:password => "oh8cneHfUrfP6", 
+		:username => "vikaevdokimenko", 
+		:real_name=> "", 
+		:url=> "http://www.vikaevdokimenko.com", 
+		:location=> "London / New York", 
+		:profile=> "") 
+		:last_login=> "2011-06-25 06:25:29"), 
+	user.new(
+		:email => "hcshann@gmail.com", 
+		:password => "oh7qeHSsz2W1Y", 
+		:username => "Bardo", 
+		:real_name=> "Curt.jpg", 
+		:url=> "", 
+		:location=> "Atlanta", 
+		:profile=> "") 
+		:last_login=> "2011-09-28 09:35:02"), 
+	user.new(
+		:email => "mahmuda95@hotmail.com", 
+		:password => "ohMCk.XsYIp3s", 
+		:username => "Maybelle", 
+		:real_name=> "th_thehosteyelunapic.jpg", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2011-10-20 15:29:44"), 
+	user.new(
+		:email => "garifogreen@gmail.com", 
+		:password => "ohsWf5oB5p/pY", 
+		:username => "greenjellybean", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2012-01-15 19:55:20"), 
+	user.new(
+		:email => "b417@live.com", 
+		:password => "ohfwqIrZZD6Vo", 
+		:username => "adbee", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2012-06-04 15:39:03"), 
+	user.new(
+		:email => "cmusich@andrew.cmu.edu", 
+		:password => "ohWaqOtzd.aW6", 
+		:username => "tinamusich", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "United States", 
+		:profile=> "") 
+		:last_login=> "2012-06-14 07:18:56"), 
+	user.new(
+		:email => "zmadman88@gmail.com", 
+		:password => "oh4sbcSOu3ZTM", 
+		:username => "zmadman88", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2012-06-11 09:35:28"), 
+	user.new(
+		:email => "dejanera.g@gmail.com", 
+		:password => "oheCZ3YcRQOzw", 
+		:username => "MonsterOfCuteness666", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2012-09-10 09:15:04"), 
+	user.new(
+		:email => "mark.slater@gmail.com", 
+		:password => "ohn9b5X3TZigE", 
+		:username => "slater", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "San Francisco, CA", 
+		:profile=> "") 
+		:last_login=> "2014-05-26 20:14:55"), 
+	user.new(
+		:email => "iris.madamei@gmail.com", 
+		:password => "ohjjv0qL3vK9I", 
+		:username => "irisson", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2013-04-12 10:07:22"), 
+	user.new(
+		:email => "stryck@gmail.com", 
+		:password => "oh8VEwiOPn4cc", 
+		:username => "Stryck", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "Chicago", 
+		:profile=> "") 
+		:last_login=> "2015-06-25 20:05:38") ]
