@@ -15,6 +15,23 @@ class UsersController < ApplicationController
     end
   end
 
+  def verify
+    @user = User.where("token = :token AND token_expires_at > :now AND verified = false",
+                       {token: params[:token], now: Time.now}).take!
+    if @user and @user.verify!
+      # update user, set session, and redirect to /show
+      session[:user_id] = @user.id
+      redirect_to profile_url, notice: 'Thanks for signing up!'
+      return
+    end
+    
+    redirect_to root_url, notice: 'Verificaion failed!'
+  end
+
+  def show
+    
+  end
+
   private
   def allowed_params
     params.require(:user).permit(:email, :password, :password_confirmation)

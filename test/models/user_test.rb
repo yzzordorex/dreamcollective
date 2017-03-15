@@ -58,5 +58,20 @@ class UserTest < ActiveSupport::TestCase
     #refute ted.verified
     
   end
+
+  test "verify!" do
+    bill = users(:bill)
+    refute bill.verified
+    bill.verify!
+    assert bill.verified
+  end
+  
+
+  test "scoped as verified" do
+    
+  end
+  test "scoped as not verified" do
+
+  end
   
 end

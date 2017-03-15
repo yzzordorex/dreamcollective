@@ -2,15 +2,17 @@
 
 bill:
   email: bill@adventure.org
-  password_digest: MyString
-
+  password_digest: <%= User.digest('password') %>
+  token: supersecret
+  token_expires_at: <%= Time.now + 60 * 60 %>
+    
 ted:
   email: ted@adventure.org
-  password_digest: MyString
+  password_digest: <%= User.digest('password') %>
   verified: true
 
 plato:
   email: republican@athens.gov
-  password_digest: MyString
+  password_digest: <%= User.digest('password') %>
   verified: true
   admin: true
