@@ -42,6 +42,13 @@ ActiveRecord::Schema.define(version: 20170312041052) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "username"
+    t.string   "real_name"
+    t.text     "profile"
+    t.string   "url"
+    t.string   "location"
+    t.datetime "last_login"
+    t.string   "ip_address"
   end
 
   add_foreign_key "taggings", "dreams"
