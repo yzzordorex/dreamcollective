@@ -24,7 +24,9 @@ class DreamsController < ApplicationController
   end
 
   # GET /dreams/1/edit
+  # a user can only edit their own dreams
   def edit
+    @dream = @current_user.dream.find(params[:id])
   end
 
   # POST /dreams
@@ -35,6 +37,7 @@ class DreamsController < ApplicationController
       redirect_to login_path
     else
       @dream = Dream.new(dream_params)
+      @dream.user = @current_user
 
       respond_to do |format|
         if @dream.save
@@ -64,6 +67,8 @@ class DreamsController < ApplicationController
 
   # DELETE /dreams/1
   # DELETE /dreams/1.json
+  # TODO acts_as_paranoid for deletes
+=begin
   def destroy
     @dream.destroy
     respond_to do |format|
@@ -71,6 +76,7 @@ class DreamsController < ApplicationController
       format.json { head :no_content }
     end
   end
+=end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -80,6 +86,6 @@ class DreamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dream_params
-      params.require(:dream).permit(:title, :body, :date_occurred, :user_id, :all_tags)
+      params.require(:dream).permit(:title, :body, :date_occurred, :all_tags)
     end
 end
