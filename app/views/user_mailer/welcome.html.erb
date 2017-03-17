@@ -1,0 +1,3 @@
+<h1>Welcome, <%= @user.username %></h1>
+
+<%= t(".body", confirmation_url: verify_url(token: @user.token)) %>

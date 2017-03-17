@@ -40,15 +40,19 @@ ActiveRecord::Schema.define(version: 20170312041052) do
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.string   "username"
     t.string   "real_name"
-    t.text     "profile",         limit: 65535
+    t.text     "profile",          limit: 65535
     t.string   "url"
     t.string   "location"
     t.datetime "last_login"
     t.string   "ip_address"
+    t.string   "token"
+    t.datetime "token_expires_at"
+    t.boolean  "verified",                       default: false, null: false
+    t.boolean  "admin",                          default: false, null: false
   end
 
   add_foreign_key "taggings", "dreams"
