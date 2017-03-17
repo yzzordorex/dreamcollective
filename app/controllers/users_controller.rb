@@ -9,22 +9,29 @@ class UsersController < ApplicationController
                               ip_address: request.remote_ip}))
     if @user.save
       @user.welcome
-      #session[:user_id] = @user.id
-      redirect_to root_url #, notice: 'Thanks for signing up! Please check your email to complete the registration process.'
+      redirect_to root_url
     else
       render :new
     end
   end
 
   def edit
-    authorize
-    @user = @current_user
+    @user = logged_in?
+    redirect_to login_path unless @user and @user.verified
   end
 
   def update
-    authorize
-    if @current_user.update_attributes(allowed_params)
-      redirect_to profile_url(@current_user)
+    @user = logged_in?
+    redirect_to login_path unless @user and @user.verified
+    if @user.update_attributes(allowed_params)
+      @user.reload
+      if @user.verified
+        redirect_to settings_path
+      else
+        @user.verify_email
+        session.delete(:user_id)
+        redirect_to login_path
+      end
     else
       render :edit
     end
@@ -36,15 +43,19 @@ class UsersController < ApplicationController
     if @user and @user.verify!
       # update user, set session, and redirect to /show
       session[:user_id] = @user.id
-      redirect_to profile_url, notice: 'Thanks for verifying your email address. Your account is now active!'
+      redirect_to settings_url, notice: 'Thanks for verifying your email address. Your account is now active!'
     else
       redirect_to root_url, notice: 'Verificaion failed!'
     end
   end
 
   def show
-    authorize
-    @user = @current_user
+    redirect_to login_path unless logged_in?
+    if params[:id]
+      @user = User.find(params[:id])
+    else
+      @user = @current_user
+    end
   end
 
   private

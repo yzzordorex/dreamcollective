@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
     mail to: @user.email
   end
 
-  def verify_email(user)
+  def verify(user)
     @user = user
     mail to: @user.email
   end

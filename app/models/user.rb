@@ -28,8 +28,8 @@ class User < ApplicationRecord
     SendNewUserWelcomeJob.perform_later(id)
   end
   
-  def confirm_email
-    SendUserEmailConfirmationJob.perform_later(id)
+  def verify_email
+    SendUserEmailVerificationJob.perform_later(id)
   end
   
   # Returns the hash digest of the given string.

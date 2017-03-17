@@ -11,8 +11,4 @@ class ApplicationController < ActionController::Base
   def require_login
     redirect_to login_url unless logged_in?
   end
-  
-  def authorize
-    redirect_to '/login' unless logged_in?
-  end
 end
