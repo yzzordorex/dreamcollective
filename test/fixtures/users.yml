@@ -1,9 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  email: bob@gmail.com
-  password_digest: MyString
+bill:
+  email: bill@adventure.org
+  password_digest: <%= User.digest('password') %>
 
-two:
-  email: jane@gmail.com
-  password_digest: MyString
+ted:
+  email: ted@adventure.org
+  password_digest: <%= User.digest('password') %>
+  verified: true
+
+plato:
+  email: republican@athens.gov
+  password_digest: <%= User.digest('password') %>
+  verified: true
+  admin: true

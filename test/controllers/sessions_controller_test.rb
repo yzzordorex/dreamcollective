@@ -9,7 +9,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "" do
-    
+  test "login" do
+    sign_in_as users(:bill).email, "password"
   end
 end
