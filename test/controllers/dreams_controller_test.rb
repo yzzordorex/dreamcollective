@@ -15,13 +15,28 @@ class DreamsControllerTest < ActionDispatch::IntegrationTest
     assert_response :redirect
   end
 
-  test "should create dream" do
+  test "should get new while logged in" do
+    sign_in_as(User.first.email, 'password')
+    get new_dream_url
+    assert_response :success
+  end
+
+  test "should redirect if posting dream while logged out" do
+    post dreams_url
+    assert_response :redirect
+  end
+
+  test "should create dream while logged in" do
     assert_difference('Dream.count') do
-      @current_user = Session.new(User.first)
-      post dreams_url, params: { dream: { user: @current_user, body: @dream.body, date_occurred: @dream.date_occurred, title: @dream.title, all_tags: @dream.all_tags } }
+      sign_in_as(User.first.email, 'password')
+      post dreams_url, params: { dream: { user_id: User.first.id, body: @dream.body, date_occurred: @dream.date_occurred, title: @dream.title, all_tags: @dream.all_tags } }
     end
 
     assert_redirected_to dream_url(Dream.last)
+  end
+
+  test "should not be able to edit someone else's dream" do
+    assert false
   end
 
   test "should show dream" do
@@ -30,6 +45,8 @@ class DreamsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit if logged in" do
+    sign_in_as(User.first.email, 'password')
+    raise @current_user.inspect
     get edit_dream_url(@dream)
     assert_response :success
   end

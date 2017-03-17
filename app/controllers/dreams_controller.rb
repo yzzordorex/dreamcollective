@@ -1,5 +1,7 @@
 class DreamsController < ApplicationController
   before_action :set_dream, only: [:show, :edit, :update, :destroy]
+  #TODO
+  #before_action :require_login, only: [:new, :edit, :create, :update, :destroy]
 
   # GET /dreams
   # GET /dreams.json
@@ -28,15 +30,20 @@ class DreamsController < ApplicationController
   # POST /dreams
   # POST /dreams.json
   def create
-    @dream = Dream.new(dream_params)
 
-    respond_to do |format|
-      if @dream.save
-        format.html { redirect_to @dream, notice: 'Dream was successfully created.' }
-        format.json { render :show, status: :created, location: @dream }
-      else
-        format.html { render :new }
-        format.json { render json: @dream.errors, status: :unprocessable_entity }
+    unless logged_in?
+      redirect_to login_path
+    else
+      @dream = Dream.new(dream_params)
+
+      respond_to do |format|
+        if @dream.save
+          format.html { redirect_to @dream, notice: 'Dream was successfully created.' }
+          format.json { render :show, status: :created, location: @dream }
+        else
+          format.html { render :new }
+          format.json { render json: @dream.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -73,7 +80,6 @@ class DreamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dream_params
-      params.require(:dream).permit(:title, :body, :date_occurred, :user_id)
-
+      params.require(:dream).permit(:title, :body, :date_occurred, :user_id, :all_tags)
     end
 end
