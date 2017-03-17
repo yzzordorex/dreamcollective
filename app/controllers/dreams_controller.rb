@@ -1,7 +1,6 @@
 class DreamsController < ApplicationController
-  before_action :set_dream, only: [:show, :edit, :update, :destroy]
-  #TODO
-  #before_action :require_login, only: [:new, :edit, :create, :update, :destroy]
+  before_action :set_dream, only: [:show, :edit, :update]
+  before_action :require_login, only: [:new, :edit, :create, :update]
 
   # GET /dreams
   # GET /dreams.json
@@ -16,37 +15,30 @@ class DreamsController < ApplicationController
 
   # GET /dreams/new
   def new
-    unless logged_in?
-        redirect_to login_path
-    else
-        @dream = Dream.new
-    end
+    @dream = Dream.new
   end
 
   # GET /dreams/1/edit
   # a user can only edit their own dreams
   def edit
-    @dream = @current_user.dream.find(params[:id])
+    @dream = @current_user.dreams.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to @dream, notice: "You can't edit someone else's dream."
   end
 
   # POST /dreams
   # POST /dreams.json
   def create
+    @dream = Dream.new(dream_params)
+    @dream.user = @current_user
 
-    unless logged_in?
-      redirect_to login_path
-    else
-      @dream = Dream.new(dream_params)
-      @dream.user = @current_user
-
-      respond_to do |format|
-        if @dream.save
-          format.html { redirect_to @dream, notice: 'Dream was successfully created.' }
-          format.json { render :show, status: :created, location: @dream }
-        else
-          format.html { render :new }
-          format.json { render json: @dream.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @dream.save
+        format.html { redirect_to @dream, notice: 'Dream was successfully created.' }
+        format.json { render :show, status: :created, location: @dream }
+      else
+        format.html { render :new }
+        format.json { render json: @dream.errors, status: :unprocessable_entity }
       end
     end
   end

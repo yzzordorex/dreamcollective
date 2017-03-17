@@ -36,26 +36,40 @@ class DreamsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to dream_url(Dream.last)
   end
 
-  #TODO
-  test "should not be able to edit someone else's dream" do
-    assert false
-  end
-
   test "should show dream" do
     get dream_url(@dream)
     assert_response :success
   end
 
-  test "should get edit if logged in" do
-    sign_in_as(User.first.email, 'password')
-    raise current_user.inspect
+  test "should get edit for current user's dream if logged in" do
+    sign_in_as(users(:bill).email, 'password')
+    @dream = users(:bill).dreams.first
     get edit_dream_url(@dream)
     assert_response :success
   end
 
-  test "should update dream" do
+  test "should not get edit of someone else's dream when logged in" do
+    sign_in_as(users(:ted).email, 'password')
+    @dream = users(:bill).dreams.first
+    get edit_dream_url(@dream)
+    assert_response :redirect
+  end
+    
+
+  test "should not get edit and should redirect to login if not logged in" do
+    get edit_dream_url(@dream)
+    assert_redirected_to login_path
+  end
+
+  test "should update dream if logged in" do
+    sign_in_as(users(:bill).email, 'password')
     patch dream_url(@dream), params: { dream: { body: @dream.body, date_occurred: @dream.date_occurred, title: @dream.title, all_tags: @dream.all_tags } }
     assert_redirected_to dream_url(@dream)
+  end
+
+  test "should not update dream and should redirect to login if not logged in" do
+    patch dream_url(@dream), params: { dream: { body: @dream.body, date_occurred: @dream.date_occurred, title: @dream.title, all_tags: @dream.all_tags } }
+    assert_redirected_to login_path
   end
 
 =begin -- TODO acts_as_paranoid
