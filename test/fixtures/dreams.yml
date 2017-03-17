@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 'Bob the dog' 
+  body: 'I was walking Bob. I am Bill.'
+  date_occurred: 2017-03-08 17:07:38
+  user: bill 
+
+two:
+  title: 'Jane the cat'
+  body: 'I was talking to Jane. I am Ted.'
+  date_occurred: 2017-03-08 17:07:38
+  user: ted 

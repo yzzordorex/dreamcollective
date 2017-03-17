@@ -1,0 +1,18 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Bob
+
+two:
+  name: Jane
+
+lucid:
+  name: Lucid
+
+nightmare:
+  name: Nightmare
+
+recurring:
+  name: Recurring
+
+
