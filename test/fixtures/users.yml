@@ -3,7 +3,9 @@
 bill:
   email: bill@adventure.org
   password_digest: <%= User.digest('password') %>
-
+  token: sometoken
+  token_expires_at: <%= Time.now + 10.days %>
+  
 ted:
   email: ted@adventure.org
   password_digest: <%= User.digest('password') %>

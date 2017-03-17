@@ -6,7 +6,9 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-  # Add more helper methods to be used by all tests here...
+  # Include ActiveJob test helpers
+  include ActiveJob::TestHelper
+
   module SignInHelper
     def sign_in_as(email, password)
       post sessions_path(email: email, password: password)

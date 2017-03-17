@@ -10,12 +10,26 @@ class UsersController < ApplicationController
     if @user.save
       @user.welcome
       #session[:user_id] = @user.id
-      redirect_to root_url, notice: 'Thanks for signing up! Please check your email to complete the registration process.'
+      redirect_to root_url #, notice: 'Thanks for signing up! Please check your email to complete the registration process.'
     else
       render :new
     end
   end
 
+  def edit
+    authorize
+    @user = @current_user
+  end
+
+  def update
+    authorize
+    if @current_user.update_attributes(allowed_params)
+      redirect_to profile_url(@current_user)
+    else
+      render :edit
+    end
+  end
+  
   def verify
     @user = User.where("token = :token AND token_expires_at > :now AND verified = false",
                        {token: params[:token], now: Time.now}).take!
@@ -23,14 +37,14 @@ class UsersController < ApplicationController
       # update user, set session, and redirect to /show
       session[:user_id] = @user.id
       redirect_to profile_url, notice: 'Thanks for verifying your email address. Your account is now active!'
-      return
+    else
+      redirect_to root_url, notice: 'Verificaion failed!'
     end
-    
-    redirect_to root_url, notice: 'Verificaion failed!'
   end
 
   def show
-    
+    authorize
+    @user = @current_user
   end
 
   private
