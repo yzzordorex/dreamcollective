@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :logged_in?
+
+  def require_login
+    redirect_to login_url unless logged_in?
+  end
 end
