@@ -3,15 +3,15 @@ class SessionsController < ApplicationController
   end
   def create
     user = User.find_by(email: params[:email])
-    if user and user.authenticate(params[:password])
+    if user and user.authenticate(params[:password]) and user.verified
       session[:user_id] = user.id
 
       user.update_session_attrs(request.remote_ip)
 
       redirect_to root_url, notice: 'Logged in!'
     else
-      flash.now.alert = 'Email or password is invalid!'
-      render :new
+      flash.now.alert = 'Login failed!'
+      redirect_to login_path
     end
   end
   def destroy

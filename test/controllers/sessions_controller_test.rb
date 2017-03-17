@@ -9,8 +9,13 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "login" do
+  test "login for unverified user" do
     sign_in_as users(:bill).email, "password"
+    assert_redirected_to login_path
+  end
+  
+  test "login for verified user" do
+    sign_in_as users(:ted).email, "password"
     assert_redirected_to root_path
   end
 end

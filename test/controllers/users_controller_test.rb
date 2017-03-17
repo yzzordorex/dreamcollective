@@ -22,6 +22,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     post users_path(user: captain) #email: "hail@ceasar.biz", password: "supersecret", password_confirmation: "supersecret")
     assert_redirected_to root_path
     get profile_path
-    assert_redirected_to root_path
+    assert_redirected_to login_path
   end
 end
