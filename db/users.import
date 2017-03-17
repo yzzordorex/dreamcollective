@@ -991,4 +991,14 @@ Wish I could control my dreams better, though...")
 		:url=> "", 
 		:location=> "Chicago", 
 		:profile=> "") 
-		:last_login=> "2015-06-25 20:05:38") ]
+		:last_login=> "2015-06-25 20:05:38"), 
+	user.new(
+		:email => "alex.bisceglie@gmail.com", 
+		:password => "oh0DHMov3CbNY", 
+		:username => "WEWILLSEE", 
+		:real_name=> "", 
+		:url=> "", 
+		:location=> "", 
+		:profile=> "") 
+		:last_login=> "2017-03-15 15:47:35") 
+]
