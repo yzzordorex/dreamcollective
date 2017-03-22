@@ -12,10 +12,38 @@
     <% end %>
 
     <div class="field">
-        <%= f.label :email %><br />
+        <%= f.label :email %>
         <%= f.text_field :email %>
     </div>
+    <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+    </div>
+    <div class="field">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+    </div>
 
+    <div class="field">
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+    </div>
+
+    <div class="field">
+        <%= f.label :real_name %>
+        <%= f.text_field :real_name %>
+    </div>
+
+    <div class="field">
+        <%= f.label :profile %>
+        <%= f.text_area :profile %>
+    </div>
+
+    <div class="field">
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+    </div>
+    
     <div class="actions"><%= f.submit "Submit" %></div>
     <div class="actions"><%= link_to 'Cancel', settings_path  %></div>
 

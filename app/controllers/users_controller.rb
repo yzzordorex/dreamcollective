@@ -52,14 +52,17 @@ class UsersController < ApplicationController
   def show
     redirect_to login_path unless logged_in?
     if params[:id]
+      
       @user = User.find(params[:id])
     else
       @user = @current_user
     end
+    @user
   end
 
   private
   def allowed_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation,
+                                 :username, :real_name, :profile, :location)
   end
 end
