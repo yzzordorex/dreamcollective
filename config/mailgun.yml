@@ -1,0 +1,9 @@
+default: &default
+  api_key: <%= ENV["MAILGUN_API_KEY"] %>
+  domain: sandbox9e2df92db864489cb1f9f5f1c53118b6.mailgun.org
+    
+development:
+  <<: *default
+
+production:
+  <<: *default

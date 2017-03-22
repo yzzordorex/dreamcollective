@@ -24,6 +24,6 @@ en:
     welcome:
       subject: Welcome
       body: Please confirm your email account %{confirmation_url}
-    verify_email:
+    verify:
       subject: Email confirmation
       body: Please confirm your email address %{confirmation_url}
