@@ -1,3 +1,5 @@
-<h1>Hi, <%= @user.username %></h1>
+<%= render 'salutation' %>
 
-<%= t(".body", confirmation_url: verify_url(token: @user.token)) %>
+<%= t(".body", verification_url: verify_url(token: @user.token)) %>
+
+<%= render 'end_matter' %>
