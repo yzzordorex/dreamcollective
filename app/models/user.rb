@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
+  scope :verified, -> { where(verified: true) }
+
   validates :email, presence: true
   has_many :dreams
 
@@ -11,6 +13,11 @@ class User < ApplicationRecord
             presence: true,
             uniqueness: true,
             format: { with: /\A\S+@\S+\.\S+\z/ }
+
+  def self.verifiable(token)
+    where("token = :token AND token_expires_at > :now AND verified = false",
+          {token: token, now: Time.now}).take!
+  end
   
   def verify!
     update(verified: true, token: nil, token_expires_at: nil)

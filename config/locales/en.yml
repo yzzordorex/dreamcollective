@@ -22,8 +22,8 @@
 en:
   user_mailer:
     welcome:
-      subject: Welcome
-      body: Please confirm your email account %{confirmation_url}
+      subject: Welcome to DreamCollective
+      body: To activate your account, please confirm your email account %{verification_url}.
     verify:
-      subject: Email confirmation
-      body: Please confirm your email address %{confirmation_url}
+      subject: Account Email Address Updated
+      body: Your DreamCollective email address was recently changed. To re-activeate your account, please confirm this email address %{verification_url}.

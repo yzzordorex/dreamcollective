@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: [:edit, :update, :show]
   def new
     @user = User.new
   end
@@ -16,19 +17,16 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = logged_in?
-    redirect_to login_path unless @user and @user.verified
+    @user = @current_user
   end
 
   def update
-    @user = logged_in?
-    redirect_to login_path unless @user and @user.verified
-    if @user.update_attributes(allowed_params)
-      @user.reload
-      if @user.verified
+    if @current_user.update_attributes(allowed_params)
+      @current_user.reload
+      if @current_user.verified
         redirect_to settings_path
       else
-        @user.verify_email
+        @current_user.verify_email
         session.delete(:user_id)
         redirect_to login_path
       end
@@ -38,19 +36,18 @@ class UsersController < ApplicationController
   end
   
   def verify
-    @user = User.where("token = :token AND token_expires_at > :now AND verified = false",
-                       {token: params[:token], now: Time.now}).take!
+    @user = User.verifiable(params[:token])
     if @user and @user.verify!
-      # update user, set session, and redirect to /show
       session[:user_id] = @user.id
-      redirect_to settings_url, notice: 'Thanks for verifying your email address. Your account is now active!'
+      redirect_to settings_url,
+                  notice: 'Thanks for verifying your email address. Your account is now active!'
     else
-      redirect_to root_url, notice: 'Verificaion failed!'
+      redirect_to root_url,
+                  notice: 'Verificaion failed!'
     end
   end
 
   def show
-    redirect_to login_path unless logged_in?
     if params[:id]
       @user = User.find(params[:id])
     else
@@ -60,6 +57,7 @@ class UsersController < ApplicationController
 
   private
   def allowed_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation,
+                                 :username, :real_name, :profile, :location)
   end
 end

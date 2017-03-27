@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
+  # ROUTES
   test "should get login page" do
     get login_path
     assert_response :success
@@ -27,7 +28,9 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get verify_url token: bill.token
     assert_redirected_to settings_path
   end
+  # /ROUTES
 
+  # USER CREATION
   test "should require email verification after creation" do
     captain = {email: "captain@logan.net", password: "supersecret", password_confirmation: "supersecret"}
     post users_path(user: captain)
@@ -51,7 +54,9 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       assert_includes delivered_email.to, captain[:email]
     end
   end
+  # /USER CREATION
 
+  # EMAIL ADDRESS UPDATES
   test "verification email enqueued to be delivered later" do
     ted = users(:ted)
     sign_in_as ted.email, "password"
@@ -70,4 +75,31 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       assert_includes delivered_email.to, new_email
     end
   end
+  # /EMAIL ADDRESS UPDATES
+
+  # UPDATING USERS
+  test "should update user attributes" do
+    ted = users(:ted)
+    sign_in_as ted.email, "password"
+    updates = {username: "teddy-tedder",
+               real_name: "Theodore Logan",
+               profile: "Time-traveling, adventure-having, metal-head wastoid",
+               location: "Everywhere, dude"
+              }
+    updates.each do |key, val|
+      refute_equal val, ted[key]
+    end
+    patch user_path(ted.id), params: {user: updates}
+    assert_redirected_to settings_path
+    
+    ted.reload
+    updates.each do |key,val|
+      assert_equal val, ted[key]
+    end
+    get settings_path
+    updates.each do |key,val|
+      assert_select "span.user_#{key.to_s.gsub("_","-")}", val
+    end
+  end
+  # /UPDATING USERS
 end

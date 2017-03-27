@@ -1,2 +1,6 @@
-<h1>PROFILE</h1>
+<h2><span class="user_username"><%= @user.username %></span></h2>
+name: <span class="user_real-name"><%= @user.real_name %></span><br />
+location: <span class="user_location"><%= @user.location %></span><br />
+profile: <span class="user_profile"><%= @user.profile %></span><br />
 
+<%= link_to "Edit", edit_settings_path  %>
