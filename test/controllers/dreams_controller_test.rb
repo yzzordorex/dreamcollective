@@ -28,7 +28,7 @@ class DreamsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create dream while logged in" do
-    sign_in_as(User.first.email, 'password')
+    sign_in_as(users(:plato).email, 'password')
     assert_difference('Dream.count') do
       post dreams_url, params: { dream: { body: @dream.body, date_occurred: @dream.date_occurred, title: @dream.title, all_tags: @dream.all_tags } }
     end
@@ -42,15 +42,15 @@ class DreamsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit for current user's dream if logged in" do
-    sign_in_as(users(:bill).email, 'password')
-    @dream = users(:bill).dreams.first
+    sign_in_as(users(:plato).email, 'password')
+    @dream = users(:plato).dreams.first
     get edit_dream_url(@dream)
     assert_response :success
   end
 
   test "should not get edit of someone else's dream when logged in" do
     sign_in_as(users(:ted).email, 'password')
-    @dream = users(:bill).dreams.first
+    @dream = users(:plato).dreams.first
     get edit_dream_url(@dream)
     assert_response :redirect
   end
@@ -62,7 +62,7 @@ class DreamsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update dream if logged in" do
-    sign_in_as(users(:bill).email, 'password')
+    sign_in_as(users(:plato).email, 'password')
     patch dream_url(@dream), params: { dream: { body: @dream.body, date_occurred: @dream.date_occurred, title: @dream.title, all_tags: @dream.all_tags } }
     assert_redirected_to dream_url(@dream)
   end
